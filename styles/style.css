@@ -1,0 +1,1107 @@
+* {
+    margin: 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 120px;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+.basketImg {
+    width: 50px;
+}
+
+#content {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.food {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.flour {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+#lunchBoxCircle {
+    background-color: rgb(247, 246, 244);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 340px;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-100%);
+}
+
+.lunch-box {
+    width: 150px;
+    height: auto;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.star {
+    width: 15px;
+    padding: 1px;
+}
+
+.rating {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ratingInput {
+    display: flex;
+    align-items: center;
+    color: orange;
+}
+
+.foodNavBar {
+    background-color: rgb(225, 225, 217, 0.3);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navBarHover:hover {
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    text-shadow: 0 0 9px rgb(255, 165, 0);
+}
+
+.navBarHover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rightArrow {
+    width: 50px;
+    padding-right: 20px;
+}
+
+.menuItems {
+    display: flex;
+    gap: 20px;
+}
+
+.dishDiv {
+    border: 2px solid rgb(225, 225, 217, 0.3);
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.plus {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 40px;
+    border: 2px solid rgb(225, 225, 217, 0.3);
+}
+
+.plusBasket {
+    width: 25px;
+}
+
+.plusBasket:hover {
+    cursor: pointer;
+}
+
+.minusBasket:hover {
+    cursor: pointer;
+}
+
+.minusBasket {
+    width: 25px;
+}
+
+.plus:hover {
+    cursor: pointer;
+}
+
+
+.mainDishesTitle {
+    background-color: rgb(246, 246, 244);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 80px;
+}
+
+#burger-menu {
+    position: absolute;
+    right: 50px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.seperator {
+    width: 30px;
+    height: 3px;
+    margin: 4px;
+    background-color: white;
+}
+
+.seperator_basket {
+    background-color: white;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+}
+
+.basket .seperator_basket {
+    width: calc(100% + 40px);
+}
+
+.subtotal {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.deliveryCosts {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#logoHeader {
+    width: 250px;
+    height: auto;
+    color: black;
+    padding-left: 50px;
+}
+
+
+.basketWrapper {
+    background-color: rgb(246, 246, 244);
+    width: 300px;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+}
+
+.basketWrapper h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.basket {
+    height: 100vh;
+    padding: 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basketDish {
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.trash {
+    width: 20px;
+}
+
+.trash:hover {
+    cursor: pointer;
+}
+
+.amountDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8px;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.contentWrapper {
+    display: flex;
+}
+
+.toggleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+.toggleSwitch {
+    width: 40px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 20px;
+    position: relative;
+}
+
+.toggleSwitch::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked + .toggleSwitch::before {
+    transform: translate(20px);
+}
+
+input[type="checkbox"]:checked + .toggleSwitch {
+    background-color: green;
+}
+
+#messageBox {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#messageBox2 {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+#messageBox.show {
+    display: block;
+    opacity: 1;
+}
+
+#messageBox2.show {
+    display: block;
+    opacity: 1;
+}
+
+.totalPrice {
+    margin-top: 10px;
+}
+
+.basketWrapper {
+    overflow:scroll;
+}
+
+.basketWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.footerWrapper{
+    background-color: aliceblue;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(255, 165, 0);
+}
+
+.footerWrapper img {
+    width: 200px;
+    height: auto;
+}
+
+.footerLinks a {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.footerLinks a:hover {
+    color: azure;
+    text-decoration: underline dashed;
+}
+
+.orderButton {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100px;
+    background-color: rgb(255, 165, 0, 0.7);
+    border: 0px;
+}
+
+.orderButton:hover {
+    cursor: pointer;
+    background-color: rgb(255, 165, 0, 0.9);
+}
+
+.table_basket {
+    font-size: 12px;
+}
+
+.lowerBasket {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    height: 40px;
+    background-color: rgb(255, 165, 0, 0.5);
+    position: sticky;
+    bottom: 50px;
+}
+
+@media (max-width: 1600px) {
+    #lunchBoxCircle {
+        width: 170px;
+        height: 170px;
+    }
+
+    .lunch-box {
+        width: 120px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .flour {
+        height: 300px;
+    }
+
+    .basketWrapper {
+        width: 270px;
+    }
+
+    #lunchBoxCircle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .lunch-box {
+        width: 100px;
+    }
+
+    .dishDiv {
+        font-size: 20px;
+    }
+
+    #logoHeader {
+        width: 200px;
+        padding-left: 0px;
+    }
+
+    .basketDish {
+        font-size: 16px;
+    }
+
+    .plusBasket {
+        width: 20px;
+        height: auto;
+    }
+
+    .minusBasket{
+        width: 20px;
+        height: auto;
+    }
+
+    .trash {
+        width: 20px;
+        height: auto;
+    }
+
+    .title {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .title {
+        margin-top: 100px;
+    }
+
+    .flour{
+        height: 250px;
+    }
+
+    .food {
+        height: 200px;
+    }
+
+    #lunchBoxCircle {
+        top: 240px;
+    }
+
+    .mainDishesTitle {
+        font-size: 36px;
+    }
+
+    .basketWrapper {
+        width: 220px;
+    }
+
+    .amountDiv {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .basketWrapper h1 {
+        font-size: 28px;
+    }
+
+    .subtotal {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .totalPrice {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .deliveryCosts {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    #logoHeader {
+        width: 170px;
+    }
+
+    .seperator {
+        width: 26px;
+        margin: 3px;
+    }
+
+    .toggleLabel {
+        font-size: 16px;
+    }
+
+    .toggleSwitch {
+        width: 36px;
+        height: 16px;
+    }
+
+    .toggleSwitch::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    input[type="checkbox"]:checked + .toggleSwitch::before {
+        transform: translate(20px);
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .foodNavBar {
+        background-color: rgb(225, 225, 217, 0.3);
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .rightArrow {
+        width: 36px;
+    }
+
+    .ratingInput {
+        font-size: 16px;
+    }
+
+    .footerWrapper img {
+        width: 150px;
+        height: auto;
+    }
+
+    .footerWrapper {
+        height: 70px;
+    }
+   
+}
+
+@media (max-width: 800px) {
+    .flour {
+        height: 200px;
+    }
+
+    .food {
+        height: 180px;
+    }
+
+    .lunch-box {
+        width: 76px;
+    }
+
+    #lunchBoxCircle {
+        width: 120px;
+        height: 120px;
+        top: 200px;
+    }
+
+    .basketWrapper {
+        width: 160px;
+    }
+
+    .amountDiv {
+        gap: 5px;
+    }
+
+    .basketDish {
+        font-size: 12px;
+    }
+
+    .basketWrapper h1 {
+        font-size: 22px;
+    }
+
+    .subtotal {
+        font-size: 10px;
+    }
+
+    .totalPrice {
+        font-size: 12px;
+    }
+
+    .deliveryCosts {
+        font-size: 8px;
+    }
+
+    .basketImg {
+        width: 35px;
+    }
+
+    .plusBasket {
+        width: 12px;
+        height: auto;
+    }
+
+    .minusBasket{
+        width: 12px;
+        height: auto;
+    }
+
+    .trash {
+        width: 12px;
+        height: auto;
+    }
+
+    .amountDiv {
+        gap: 3px;
+        font-size: 12px;
+    }
+
+    .basket {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-top: 80px;
+    }
+
+    .dishDiv {
+        font-size: 16px;
+    }
+
+    .plus {
+        width: 30px;
+        height: auto;
+    }
+
+    .mainDishesTitle {
+        height: 50px;
+        font-size: 36px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 60px;
+    }
+
+    .foodNavBar {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    #logoHeader {
+        width: 140px;
+    }
+
+    .seperator {
+        width: 20px;
+        height: 2px;
+        margin: 3px;
+    }
+
+    .seperator_basket {
+        margin-top: 10px;
+    }
+
+    .toggleLabel {
+        font-size: 12px;
+    }
+
+    .toggleSwitch {
+        width: 20px;
+        height: 10px;
+    }
+
+    .toggleSwitch::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    input[type="checkbox"]:checked + .toggleSwitch::before {
+        transform: translate(10px);
+    }
+
+    .footerWrapper img {
+        width: 120px;
+        height: auto;
+    }
+
+    .footerWrapper {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .footerLinks a {
+        margin: 10px;
+    }
+
+    .orderButton {
+        width: 60px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .flour {
+        height: 120px;
+    }
+
+    .food {
+        height: 160px;
+    }
+
+    .lunch-box {
+        width: 60px;
+    }
+
+    #lunchBoxCircle {
+        width: 100px;
+        height: 100px;
+        top: 190px;
+    }
+
+    .title {
+        font-size: 12px;
+        margin-top: 60px;
+    }
+
+    .dishDiv {
+        font-size: 14px;
+    }
+
+    .plus {
+        width: 20px;
+        height: auto;
+    }
+
+    .mainDishesTitle {
+        font-size: 28px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 40px;
+    }
+
+    .foodNavBar {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    #logoHeader {
+        width: 140px;
+    }
+
+    .seperator {
+        width: 20px;
+        height: 2px;
+        margin: 3px;
+    }
+
+    .rightArrow {
+        width: 28px;
+    }
+
+    .ratingInput {
+        font-size: 14px;
+    }
+
+    .footerWrapper img {
+        width: 80px;
+        height: auto;
+    }
+
+    .footerWrapper {
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .basketDish {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .flour {
+        height: 80px;
+    }
+
+    .food {
+        height: 80px;
+    }
+
+    .lunch-box {
+        width: 30px;
+    }
+
+    #lunchBoxCircle {
+        width: 60px;
+        height: 60px;
+        top: 110px;
+    }
+
+    .title {
+        font-size: 8px;
+        margin-top: 40px;
+    }
+
+    .dishDiv {
+        font-size: 10px;
+    }
+
+    .plus {
+        width: 16px;
+        height: auto;
+    }
+
+    .mainDishesTitle {
+        font-size: 18px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        height: 28px;
+    }
+
+    .foodNavBar {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 10px;
+    }
+
+    .menuItems {
+        gap: 10px
+    }
+
+    header {
+        height: 60px;
+    }
+
+    #logoHeader {
+        width: 100px;
+    }
+
+    .seperator {
+        width: 16px;
+        height: 2px;
+        margin: 2px;
+    }
+
+    .basketImg {
+        width: 25px;
+    }
+
+    .rightArrow {
+        width: 28px;
+        padding-right: 10px;
+    }
+
+    .ratingInput {
+        font-size: 10px;
+    }
+
+    .basketWrapper {
+        width: 120px;
+    }
+
+    .amountDiv {
+        gap: 3px;
+    }
+
+    .basketWrapper h1 {
+        font-size: 12px;
+    }
+
+    .subtotal {
+        font-size: 10px;
+    }
+
+    .totalPrice {
+        font-size: 12px;
+    }
+
+    .deliveryCosts {
+        font-size: 8px;
+    }
+
+    .plusBasket {
+        width: 10px;
+        height: auto;
+    }
+
+    .minusBasket{
+        width: 8px;
+        height: auto;
+    }
+
+    .trash {
+        width: 8px;
+        height: auto;
+    }
+
+    .amountDiv {
+        gap: 3px;
+        font-size: 8px;
+    }
+
+    .basket {
+        padding: 10px;
+    }
+
+    .basketDish {
+        font-size: 10px;
+    }
+
+    .toggleLabel {
+        font-size: 8px;
+    }
+
+    .toggleSwitch {
+        width: 20px;
+        height: 10px;
+    }
+
+    .toggleWrapper {
+        gap: 3px;
+    }
+
+    .toggleSwitch::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    input[type="checkbox"]:checked + .toggleSwitch::before {
+        transform: translate(11px);
+    }
+
+    #burger-menu {
+        right: 30px;
+    }
+}
+
+@media (max-width: 430px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+
+    #content {
+        padding-left: 0px;
+        width: auto;
+        padding-right: 0px;
+    }
+
+    .basketWrapper {
+        width: auto;
+        display: none;
+        height: 300px;
+        position: sticky;
+        bottom: 0px;
+    }
+
+    .basketWrapper h1 {
+        margin-top: 10px;
+    }
+
+    .basket {
+        height: auto;
+        overflow: scroll;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .basketDish {
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+    }
+
+    .amountDiv {
+        margin: 0px;
+    }
+
+    .orderButton {
+        margin: 0px;
+    }
+
+    #content {
+        position: relative;
+    }
+
+    #burger-menu {
+        position:unset;
+        
+    }
+
+    table tr {
+        line-height: 1.5;
+    }
+
+    table td {
+        padding: 2px;
+    }
+
+    .footerLinks a {
+        margin: 5px;
+    }
+
+    .footerWrapper {
+        font-size: 10px;
+    }
+
+    #burger-menu {
+        display: flex;
+    }
+
+    #lunchBoxCircle {
+        transform: translate(-50%);
+        top: 50px;
+    }
+
+    header #burger-menu {
+        display: none;
+    }
+
+    body {
+        overflow: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .visible {
+        display: block;
+    }
+    
+    .stickyBasket {
+        position: sticky;
+        bottom: 300px;
+    }
+
+    #messageBox {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #messageBox2 {
+        font-size: 12px;
+        padding: 5px 10px;
+        white-space: nowrap;
+    }
+
+}
+
+
+
+

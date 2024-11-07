@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/db.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Bestellapp</title>
+</head>
+
+<header>
+    <img src="Material/Logo/Logo.png" alt="Logo" id="logoHeader">
+</header>
+
+<body onload="init()">
+    <div class="contentWrapper">
+        <div id="content">
+            <img src="Material/Img/food.jpg" alt="" class="food">
+            <div id="lunchBoxCircle">
+                <div class="lunchBoxBackgorund">
+                    <img src="Material/Img/lunch-box.png" alt="" class="lunch-box">
+                </div>
+            </div>
+            <div class="title">
+                <h1>SchlemmerExpress</h1>
+            </div>
+            <div class="rating">
+                <span class="ratingInput">Rating (4.5 / 5 <img src="Material/Img/star.png" alt="" class="star">)</span>
+            </div>
+            <div class="foodNavBar">
+                <img src="Material/Img/right-arrow.png" alt="" class="rightArrow">
+                <div class="menuItems">
+                    <a href="#contentDishes" class="mainDishes navBarHover">Main Dishes</a>
+                    <a href="#contentSideDishes" class="sideDishes navBarHover">Side Dishes</a>
+                    <a href="#contentDesserts" class="desserts navBarHover">Desserts</a>
+                </div>
+            </div>
+            <img src="Material/Img/flour.jpg" alt="flourimage" class="flour">
+            <span class="mainDishesTitle">Hauptgerichte</span>
+            <div id="contentDishes"></div>
+            <span class="mainDishesTitle">Sidedishes</span>
+            <div id="contentSideDishes">
+            </div>
+            <span class="mainDishesTitle">Desserts</span>
+            <div id="contentDesserts">
+            </div>
+        </div>
+        <div class="basketWrapper">
+            <h1>Basket</h1>
+            <div class="toggleWrapper">
+                <label class="toggleLabel">Pick-Up</label>
+                <input type="checkbox" id="toggleDelivery" onclick="toggleDelivery()" />
+                <label for="toggleDelivery" class="toggleSwitch"></label>
+            </div>
+            <div class="seperator_basket"></div>
+            <div class="basket">
+            </div>
+        </div>
+        <div id="messageBox" class="hidden">Added to basket</div>
+        <div id="messageBox2" class="hidden">Your order has been placed</div>
+    </div>
+    <footer>
+        <div class="footerWrapper">
+            <img src="Material/Logo/Bestell App- Logo.svg" alt="">
+            <div class="footerLinks">
+                <a href="">Impressum</a>
+                <a href="">Datenschutz</a>
+                <a href="">Follow Us!</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
